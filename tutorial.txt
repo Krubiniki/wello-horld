@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+    void backtomenu();  // para retornar ao Main - Lista de Tópicos
+    int codigo;         // para referenciar os inputs do usuário
+
+// Função para listar os tópicos e apresentar um breve texto sobre eles //
+int main(){
+
+    //Lista/Menu dos tópicos//
+    printf("Lista de tópicos:\n 1-IF ELSE\t 2-FOR LOOP\t 3-WHILE\t 4-ATOI  \t 5-CONVERSION CHARS\n");
+    printf(" 6-TIME DELAY\t 7-OPERADORES\t 8-INCLUDE\t 9-PRINFT\t 10-COMANDOS PROMPT\n");
+    printf(" 11-INCREMENT\t 12-RETURN\t 13-INPUT\t 14-RANDOM\t 15-VARIABLE TYPES\n");
+    printf(" 16-SWITCH CASE\t 17-SCANF\t 18-GETS PUTS\t 19-ARRAY\t 20-ESCAPE SEQUENCES\n");
+    printf("Digite o código do que deseja saber mais, ou qualquer letra + enter para sair:");
+
+    //Seletor do input - tópico ou sair//
+    scanf("%d",&codigo);
+
+    // Texto do 1-IF ELSE //
+    if(codigo==1){
+        puts("--------------------------------------------------\nIf utiliza de condições lógicas para funcionar.\n\nUma comparação deve ser colocada dentro do () e se o resultado for verdadeiro {} será aplicado. É possível utilizar o valor falso através do else {}.\n\nComo funciona:\n if(comparação){fazer isso se for verdadeiro;}\n\nPara emendar vários if, é possível utilizar o else if:\nif(comparação){fazer isso se for verdadeiro;}\nelse if(comparação II){fazer isso se a comparação II for verdadeira;}\nelse if(comparação III){fazer isso se a comparação III for verdadeira};...\n\nOperadores lógicos que usam em comparações:\n== -> IGUAL A\n>  -> MAIOR QUE\n<  -> MENOR QUE\n|| -> OU\n&& -> E\n<= -> MENOR ou = a\n>= -> MAIOR ou = a\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 2-FOR LOOP //
+    else if(codigo==2){
+        puts("--------------------------------------------------\nA função FOR tem o propósito de fazer loops momentâneos, onde se divide em três etapas nos ():a condição para inicialização, o statement enquanto for true e por fim um statement que será realizado em cada loop. Normalmente se usa para que o loop pare de funcionar em alguma condição. (veja increment)\n\nComo funciona:\nfor(condição para iniciar; enquanto é true;fazer isso){fazer aquilo;}\n\nTambém pode ser visto nessas condições:\nfor(;statement;){}\nfor(;;){} -> também conhecido como loop infinito.\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    else if(codigo==3){
+        puts("--------------------------------------------------\n\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    else if(codigo==00){
+        puts("--------------------------------------------------\n\n--------------------------------------------------");
+        backtomenu();
+    }
+    return(0);
+}
+
+
+// Função para retornar ao menu //
+void backtomenu(){
+    printf("Digite 0 para voltar, ou qualquer tecla + enter para sair:");
+    scanf("%d",&codigo);
+    if(codigo == 0)main();
+
+}
