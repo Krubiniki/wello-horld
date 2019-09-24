@@ -1,0 +1,19 @@
+// nesta parte aprender sobre PRINFT
+
+// nesta parte aprender sobre PROMPT COMMANDS 
+
+// nesta parte aprender sobre VARIABLE TYPES 
+
+// nesta parte aprender sobre INPUT/OUTPUT 
+
+// nesta parte aprender sobre RANDOM 
+
+// nesta parte aprender sobre SWITCH/CASE 
+
+// nesta parte aprender sobre SCANF() 
+
+// nesta parte aprender sobre GETS/PUTS() 
+
+// nesta parte aprender sobre ARRAY 
+
+// nesta parte aprender sobre ESCAPE SEQUENCES
