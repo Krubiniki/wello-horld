@@ -1,19 +1,155 @@
-// nesta parte aprender sobre PRINFT
+#include <stdio.h>
 
-// nesta parte aprender sobre PROMPT COMMANDS 
+    void backtomenu();  // para retornar ao Main - Lista de Tópicos
+    int codigo;         // para referenciar os inputs do usuário
 
-// nesta parte aprender sobre VARIABLE TYPES 
+// Função para listar os tópicos e apresentar um breve texto sobre eles //
+int main(){
 
-// nesta parte aprender sobre INPUT/OUTPUT 
+    //Lista/Menu dos tópicos//
+    printf("Lista de tópicos:\n 1-IF ELSE\t 2-FOR LOOP\t 3-WHILE\t 4-ATOI  \t 5-CONVERSION CHARS\n");
+    printf(" 6-TIME DELAY\t 7-OPERADORES\t 8-INCLUDE\t 9-PRINFT\t 10-COMANDOS PROMPT\n");
+    printf(" 11-INCREMENT\t 12-RETURN\t 13-INPUT\t 14-RANDOM\t 15-VARIABLE TYPES\n");
+    printf(" 16-SWITCH CASE\t 17-SCANF\t 18-GETS PUTS\t 19-ARRAY\t 20-ESCAPE SEQUENCES\n");
+    printf("Digite o código do que deseja saber mais, ou qualquer letra + enter para sair:");
 
-// nesta parte aprender sobre RANDOM 
+    //Seletor do input - tópico ou sair//
+    scanf("%d",&codigo);
 
-// nesta parte aprender sobre SWITCH/CASE 
+    // Texto do 1-IF ELSE //
+    if(codigo==1){
+        puts("--------------------------------------------------\nIf utiliza de condições lógicas para funcionar.\n\nUma comparação deve ser colocada dentro do () e se o resultado for verdadeiro {} será aplicado. É possível utilizar o valor falso através do else {}.\n\nComo funciona:\n if(comparação){fazer isso se for verdadeiro;}\n\nPara emendar vários if, é possível utilizar o else if:\nif(comparação){fazer isso se for verdadeiro;}\nelse if(comparação II){fazer isso se a comparação II for verdadeira;}\nelse if(comparação III){fazer isso se a comparação III for verdadeira};...\n--------------------------------------------------");
+        backtomenu();
+    }
 
-// nesta parte aprender sobre SCANF() 
+    // Texto do 2-FOR LOOP //
+    else if(codigo==2){
+        puts("--------------------------------------------------\nA função FOR tem o propósito de fazer loops momentâneos, onde se divide em três etapas nos ():a condição para inicialização, o statement enquanto for true e por fim um statement que será realizado em cada loop. Normalmente se usa para que o loop pare de funcionar em alguma condição. (veja increment)\n\nComo funciona:\nfor(condição para iniciar; enquanto é true;fazer isso){fazer aquilo;}\n\nTambém pode ser visto nessas condições:\nfor(;statement;){}\nfor(;;){} -> também conhecido como loop infinito.\n--------------------------------------------------");
+        backtomenu();
+    }
 
-// nesta parte aprender sobre GETS/PUTS() 
+    // Texto do 3-WHILE //
+    else if(codigo==3){
+        puts("--------------------------------------------------\nA função while tem o propósito de fazer loops. Usualmente o while é utilizado para condições infinitas até que algo mude.\n\nComo funciona:\nwhile(enquanto a comparação for true){fazer isso;}\ndo{fazer isso;}while(enquanto for true); -> usado para executar o loop 1 vez e depois quando o while for true. Normalmente utilizado para verificar um input\n--------------------------------------------------");
+        backtomenu();
+    }
 
-// nesta parte aprender sobre ARRAY 
+    // Texto do 4-ATOI //
+    else if(codigo==4){
+        puts("--------------------------------------------------\nATOI significa ASCII TO Integer. A função converte uma string numérica para um valor numérico, para utilizar o valor que o número representa e não o valor ASCII de um dígito numérico.Para ser utilizado, precisa do #include <stdlib.h>. Para funcionar, ela precisa de uma variável de valor, e uma de string. assim é possível usar o valor da tecla ASCII em uma comparação de valores.\n\nComo funciona com um input do usuário:\nint inteiro;\nchar palavra;\nscanf(\"%s\",&palavra); -> aqui ele pega o input em string\ninteiro = atoi(&palavra); -> aqui ele transforma o valor de string ASCII para o valor numérico do dígito\n--------------------------------------------------");
+        backtomenu();
+    }
 
-// nesta parte aprender sobre ESCAPE SEQUENCES
+    // Texto do 5-CONVERSION CHARS //
+    else if(codigo==5){
+        puts("--------------------------------------------------\nOs caracteres de conversão são códigos que servem para trazer um output de acordo com o que desejar.\n\n%c\tum Caracter\n%d\tinteiro Decimal\n%e\tnotação científica E no tipo float\n%f\tvalor Float\n%g\tvalor %e ou %f, que for mais curto\n%i\tInteiro decimal\n%o\tvalor inteiro Octal positivo (base 8)\n%s\tString de texto\n%u\tinteiro decimal positivo\n%x\tvalor inteiro heXadecimal positivo (base 16)\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 6-TIME DELAY //
+    else if(codigo==6){
+        puts("--------------------------------------------------\nExistem ferramentas que podem ser utilizadas para dar atraso em algum comando, utilizado mais para melhorar algum tipo de feedback para o usuário. Observação:cada computador tem um tempo diferente, faça uns testes substituindo o CONTADOR por algum número e dê um printf após a função para saber quanto tempo está passando na função.\n\nComo funciona:\ndelay(){ 		-> a função pode ter qualquer nome\n\nlong int x; 		-> ou double se precisar de muitos dígitos\nfor(x=0;x<CONTADOR;x++);\n}\n\nOU\n\nsleep(número em tempo); -> a medida de tempo muda de acordo com o GCC, normalmente é segundos\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 7-OPERADORES //
+    else if(codigo==7){
+        puts("--------------------------------------------------\nOperadores são símbolos para realizar ações lógicas em elementos. Os operadores unários utilizam 1 elemento, e binários utilizam 2 elementos para que funcionem.\n\nOperadores binários:\n+ -> SOMA\n- -> SUBTRAÇÃO\n* -> MULTIPLICAÇÃO\n/ -> DIVISÃO\n== -> IGUAL A\n!= -> NÃO IGUAL A\n>  -> MAIOR QUE\n<  -> MENOR QUE\n|| -> OU\n&& -> E\n<= -> MENOR ou = a\n>= -> MAIOR ou = a\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 8-INCLUDE //
+    else if(codigo==8){
+        puts("--------------------------------------------------\nA função #include funciona para incluir algum arquivo. Os arquivos HEADER(.h) podem ser criados ou usando dos arquivos instalados em seu computador, como o stdio.h, que nesse caso, ao ler o seu código, você está dando uma legenda para o computador dizendo o que fazer com as funções.\n\nComo funciona:\n#include <arquivo.extensão> -> normalmente usado das bibliotecas prontas como stdio.h\n\nA função #define é utilizada normalmente para incluir alguma constante, pense como uma variável que não troca seu valor. Normalmente se declara com todas as letras em CAPS para diferenciar de variáveis. Não se utiliza \";\" nem \"=\" para declarar.\n\nComo funciona:\n#define VELOCIDADEDALUZ *Inserir valor ou string/character*\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 9-PRINFT //
+    else if(codigo==9){
+        puts("--------------------------------------------------\nprintf é uma função que apresenta texto no terminal, em tudo que estiver dentro de \"\". Usando \\ é possível apresentar caracteres especiais, veja mais em ESCAPE SEQUENCES. Além disso é possível apresentar variáveis usando o caracter de conversão %.\n\nComo funciona:\nprintf(\"texto\"); -> apresenta o texto\nprintf(\"tex %s to\",variável); -> apresenta uma variável de string no texto pelo caractere de conversão\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 10-COMANDOS PROMPT //
+    else if(codigo==10){
+        puts("--------------------------------------------------\nBASH: linguagem para utilizar comandos no terminal\nVIM: editor de texto para códigos\n\nBASH\npara compilar:\nclang (arquivo.extenção)\nmake (arquivo)\n\npara rodar:\n./(arquivo)\n\nDiretórios:\n(make directory)mkdir (diretório)\n(list)ls  = mostra o que tem no diretório\npwd = mostra o diretório em que está atualmente\n(change directory)cd (nome do diretório que deseja ir)\n~ = home\n\n(manual)man ()  = descrição da função\n\nVIM\nvim (arquivo) abre um arquivo já criado ou cria um novo\ni ou insert para inserir informações no arquivo\nesc para ir para o terminal\n:wq salvar e sair\n:w salvar\n:q sair\n\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 11-INCREMENT //
+    else if(codigo==11){
+        puts("--------------------------------------------------\nO operador de incrementar e decrementar são, respectivamente ++ e --. Esses operadores servem para adicionar ou diminuir  1 a uma variável, normalmente utilizada para fazer com que um loop aconteça determinadas vezes.\n\nComo funciona:\n#include <stdio.h>\n\nint massadobolo;\n\nint main(){\n\n\tfor(massadobolo=0;massadobolo<5;massadobolo++){\n\tprintf(\"A massa precisa incrementar:%i\",massadobolo);\n\t}\n\n\tprintf(\"A massa está boa agora, pode assar!\");\n\n}\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 12-RETURN //
+    else if(codigo==12){
+        puts("--------------------------------------------------\nEsta função serve para retornar pelo Output de uma função(o que está dentro dos \"()\") Lembre que a função main deve retornar um valor, e em alguns casos(computadores) é preciso que main retorne o valor 0 para que o código não indique condições de erro.\n\nComo funciona:\nreturn(valor a ser retornado);\n\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 13-INPUT //
+    else if(codigo==13){
+        puts("--------------------------------------------------\nInput é colocar alguma informação, e output é a informação que é apresentada ao usuário ou respondida como resultado do input. Em funções será o tipo de informação que é respondida e devolvida.\n\nComo funciona:\ninput função(output) -> é possível definir o tipo, veja em variable types\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 14-RANDOM //
+    else if(codigo==14){
+        puts("--------------------------------------------------\nPara usar a função random e gerar um número randômico é necessário usar a #include <stdlib.h>, note que a função é estática e sempre gerará o mesmo número caso não se altere a seed da função rand usando a função srand que deve ser sempre positivo, portanto a seed deve ser sempre unsigned. Ao usar uma seed = os números sorteados também serão os mesmos.\nMais ao fim terá uma solução para deixar a seed da função srand alterável pelo tempo, incluindo o #include<time.h>.\n\nComo funciona:\nint rand();	-> um número randômico dentro da range do int\nvariável = rand();	-> atribui um número sorteado a variável\nsrand(unsigned int);	-> deve ser utilizada antes de utilizar a função rand\n\nSeed pelo tempo:\n   time_t tempo;	-> declarando uma variável do tipo time_t\n   srand((unsigned) time(&tempo));	-> usando a seed pelo tempo\n   printf(\"%i\\n\", rand() % 50);		-> printa um número randômico de 0 a 50\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 15-VARIABLE TYPES //
+    else if(codigo==15){
+        puts("--------------------------------------------------\nAs variáveis podem ser declaradas das seguintes maneiras em C. Como char também pode ser usado como int, sendo considerado pelo seu valor ASCII.\n\nchar	-> guarda um caractere ou seu valor ASCII\nint	-> guarda valores inteiros\nfloat	-> permite valores fracionados\ndouble	-> maior valor possível, também permite fracionado\n\nPara int:\nshort	-> valores pequenos\nlong	-> valores maiores\nsigned	-> permite números negativos\nunsigned-> não permite valores negativos\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 16-SWITCH CASE //
+    else if(codigo==16){
+        puts("--------------------------------------------------\nUsado normalmente para uma seleção de condição, semelhante com a sequência de else-if. É necessário para cada case um break; de modo a evitar que outros cases executem indesejadamente. O último item do switch case deve ser o default, onde é executado caso nenhuma condição dos cases ocorrer. A comparação feita é identica a um if com ==, onde se compara o conteúdo do switch com o informado ao case. Lembre sempre do tipo de informação que está sendo comparada: int ou char/string.\n\nComo funciona:\nswitch(variável ou função){\n	case itemcomparativo1:		statement; break;\n	case itemcomparativo2:		statement; break;\n	case itemcomparativo3:		statement; break;\n	default:	statement;\n}\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 17-SCANF //
+    else if(codigo==17){
+        puts("--------------------------------------------------\nA função scanf serve para captar inputs do teclado e armazená-los em uma variável, onde é possível formatar. Para usar a função, você precisa de uma variável string, ou de character.\n\nComo funciona:\nchar variável[x];	-> x é o número máximo de caracteres que deseja captar.\nscanf(\"%s\",&variável);\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 18-GETS PUTS //
+    else if(codigo==18){
+        puts("--------------------------------------------------\nGets é uma função para coletar e armazenar input do teclado em uma variável, lembre que se números são digitados, serão considerados como characteres de string não pelo seu valor. Gets não é considerado seguro devido ao overflow no input, essa falha permite que mais caracteres sejam inputados e o programa possa receber vírus.\n\nPuts é uma versão simplificada do printf, a função apresenta um string de texto mas sem a formatação do printf. Puts sempre termina com um \\n (pula uma linha).\n\nComo funciona:\ngets(variável);\n\nputs(\"texto\");\nputs(\"%s\",variável);\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 19-ARRAY //
+    else if(codigo==19){
+        puts("--------------------------------------------------\nArray são matrizes, na linguagem de programação, são variáveis para armazenar diferentes valores characteres e strings, sendo do mesmo tipo. O primeiro valor armazenado sempre será considerado como o item 0 da matriz, o segundo como o item 1, e assim por diante. Ao declarar, o número dentro do [] será a quantidade de itens armazenados na matriz. Para uma matriz de caracteres, sempre considere que o último valor será considerado com o caracter nulo(código:\\0)\n\nComo funciona:\nint matriz[4];	-> declaramos uma variável inteira chamada matriz, onde pode ser armazenado 4 valores diferentes de int, sendo considerados como: matriz[0] o primeiro valor, matriz[1] o segundo valor e assim por diante\nmatriz[0] = 12;	-> Aqui atribuímos o valor só para o item 0\n\nint array[] {10, 25, 7};	-> nesta array, estamos já declarando o valor dos itens 0, 1 e 2\n\nchar nome[] = \"Maria\";    -> aqui declaramos uma string como matriz de caracteres\nchar nome[]={'M','a','r','i','a'}	-> também pode ser declarado assim\n\nexemplo:\n	char name[8]; -> declaro uma variável de string que armazena 8 caracteres\n	scanf(\"%s\",&*name);	-> atribuo o que digitar na matriz\n	printf(\"O que você digitou é:%s\\n\",name);	-> dou display do que foi armazenado na matriz\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    // Texto do 20-ESCAPE SEQUENCES //
+    else if(codigo==20){
+        puts("--------------------------------------------------\nSequências de escape servem para que computador o leia como texto, alguns caracteres e formatações de funções que apresentam texto. Veja PUTS, PRINTF.\n\n\\(o caracter especial) como:\n\\=\n\\%\n\\&\n\\#\nentre outros...\n\n\\a Beeps the speaker\n\\b Backspace (moves the cursor back, no erase)\n\\f Form feed (ejects printer page; may clear the screen on some computers)\n\\n Newline, like pressing the Enter key\n\\r Carriage return (moves the cursor to the beginning of the line)\n\\t Tab\n\\v Vertical tab (moves the cursor down a line)\n\\\\ The backslash character\n\\’ The apostrophe\n\\” The double-quote character\n\\? The question mark\n\\0 The null byte (thats 0, not the letter O)\n\\Onn A character value in octal (base 8)\n\\xnnn A character value in hexadecimal (base 16)\n--------------------------------------------------");
+        backtomenu();
+    }
+
+    /*****
+    //base para novo tópico//
+    else if(codigo==00){
+        puts("--------------------------------------------------\n\n--------------------------------------------------");
+        backtomenu();
+    }
+    *****/
+    return(0);
+}
+
+// Função para retornar ao menu //
+void backtomenu(){
+    printf("Digite 0 para voltar, ou qualquer tecla + enter para sair:");
+    scanf("%d",&codigo);
+    if(codigo == 0)main();
+
+}
